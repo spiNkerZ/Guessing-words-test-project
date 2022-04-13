@@ -45,15 +45,6 @@ public class GameManager : MonoBehaviour,IGameResult
         }
     }
 
-    public void WIN()
-    {
-        InterfaceManager.singelton.GameWin(lifeCount);
-    }
-    public void GAMEOVER()
-    {
-        InterfaceManager.singelton.GameOver(pointCounts);
-    }
- 
     public void UpdateUI()
     {
         UIManager.singelton.SetLifes(lifeCount);
@@ -66,20 +57,16 @@ public class GameManager : MonoBehaviour,IGameResult
         UpdateUI();
     }
 
-    public void IGameOver(int _pointCount)
-    {
-        Debug.Log("Game over");
-    }
-
-    public void IGameNextLevel()
-    {
-        gameLevel++;
-    }
-
     public void IGameRestart()
     {
         gameLevel = 0;
         lifeCount = gameSetting.countAttempts;
         UpdateUI();
     }
+
+    public void WIN() => InterfaceManager.singelton.GameWin(lifeCount);
+    public void GAMEOVER() => InterfaceManager.singelton.GameOver(pointCounts);
+    public void IGameOver(int _pointCount) => Debug.Log("Game over");
+    public void IGameNextLevel() => gameLevel++;
+   
 }

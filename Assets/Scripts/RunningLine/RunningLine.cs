@@ -24,12 +24,13 @@ public class RunningLine : MonoBehaviour,IGuessedWord,IGameResult
     [SerializeField] [Range(0, 1)] float lineRunSpeed;
 
     Vector3 firstWordStartPos;
-    [SerializeField]  TextMeshProUGUI[] originalArrayTMP;
-    [SerializeField] ContentSizeFitter[] oritinalArraySizeFilter;
+
+    TextMeshProUGUI[] originalArrayTMP;
+    ContentSizeFitter[] oritinalArraySizeFilter;
 
     bool runLine,endWords;
     string[] wordsForRead;
-    float leftBorder,rightBorder, distBetweenWords;
+    public float leftBorder,rightBorder, distBetweenWords;
     int wordLastID;
 
     void Start()
@@ -168,9 +169,9 @@ public class RunningLine : MonoBehaviour,IGuessedWord,IGameResult
         {
             RectTransform beforeUIText = UIRunLineTextArray[i - 1].rectTransform;
             RectTransform thisRect = UIRunLineTextArray[i].rectTransform;
-            Vector3 thisPos = thisRect.position;
-            float offsetValue = (beforeUIText.position.x + beforeUIText.sizeDelta.x / 2) + thisRect.sizeDelta.x / 2 + distBetweenWords;
-            UIRunLineTextArray[i].transform.position = new Vector3(offsetValue, thisPos.y, thisPos.z);
+            Vector3 thisPos = thisRect.localPosition;
+            float offsetValue = (beforeUIText.localPosition.x + beforeUIText.sizeDelta.x / 2) + thisRect.sizeDelta.x / 2 + distBetweenWords;
+            UIRunLineTextArray[i].transform.localPosition = new Vector3(offsetValue , thisPos.y, thisPos.z);
         }
     }
 

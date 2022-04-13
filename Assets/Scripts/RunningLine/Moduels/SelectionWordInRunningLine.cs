@@ -30,9 +30,7 @@ public class SelectionWordInRunningLine : MonoBehaviour,IGuessedWord
         InterfaceManager.singelton.AddIGuessedWordInArray(this);
     }
     
-    void RunLineOn(bool _isRun) => OnRunLine.Invoke(_isRun);
-    void EncodeWord() => OnEncodeWord.Invoke();
-
+ 
     public void SelectionProcess(TextMeshProUGUI[] _wordsTMPArray, float _rightBorder)
     {
         if (!focusTMPWord)
@@ -92,4 +90,7 @@ public class SelectionWordInRunningLine : MonoBehaviour,IGuessedWord
         focusTMPWord = null;
         focusTMPWordEncoded = false;
     }
+
+    void RunLineOn(bool _isRun) => OnRunLine.Invoke(_isRun);
+    void EncodeWord() => OnEncodeWord.Invoke();
 }

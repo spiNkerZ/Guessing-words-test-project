@@ -14,32 +14,19 @@ public class SoundsManager : MonoBehaviour,IGameResult
     {
         singelton = this;
     }
+
     private void Start()
     {
         InterfaceManager.singelton.AddIGameResultInArray(this);
     }
+
     public void PlaySoundsEffect(SoundsEffects _effectType)
     {
         audioSource.PlayOneShot(soundsList.soundsArray[(int)_effectType],0.7f);
     }
 
-    public void IGameWin(int _pointCount = 0)
-    {
-        PlaySoundsEffect(SoundsEffects.Win);
-    }
-
-    public void IGameOver(int _pointCount = 0)
-    {
-        PlaySoundsEffect(SoundsEffects.Loose);
-    }
-
-    public void IGameNextLevel()
-    {
-        PlaySoundsEffect(SoundsEffects.TrueOpenLetter);
-    }
-
-    public void IGameRestart()
-    {
-        PlaySoundsEffect(SoundsEffects.TrueOpenLetter);
-    }
+    public void IGameWin(int _pointCount = 0) => PlaySoundsEffect(SoundsEffects.Win);
+    public void IGameOver(int _pointCount = 0) => PlaySoundsEffect(SoundsEffects.Loose);
+    public void IGameNextLevel() => PlaySoundsEffect(SoundsEffects.TrueOpenLetter);
+    public void IGameRestart() => PlaySoundsEffect(SoundsEffects.TrueOpenLetter);
 }

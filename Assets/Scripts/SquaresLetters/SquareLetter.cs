@@ -8,16 +8,6 @@ public class SquareLetter : MonoBehaviour
     [SerializeField] TextMeshProUGUI textUI;
     [SerializeField] [Range(0, 1)] float speedOpen;
 
-    public void SetLetter(string _letter)
-    {
-        textUI.text = _letter;
-    }
-
-    public void CloseLetter()
-    {
-        transform.localRotation = Quaternion.Euler(0, 180, 0);
-    }
-
     public void OpenLetter()
     {
         StartCoroutine(OpenCorutine());
@@ -35,12 +25,8 @@ public class SquareLetter : MonoBehaviour
         isOpen = true;
     }
 
-    public void ActiveLetter()
-    {
-        gameObject.SetActive(true);
-    }
-    public void DeactiveLetter()
-    {
-        gameObject.SetActive(false);
-    }
+    public void SetLetter(string _letter) => textUI.text = _letter;
+    public void ActiveLetter() => gameObject.SetActive(true);
+    public void DeactiveLetter() => gameObject.SetActive(false);
+    public void CloseLetter() => transform.localRotation = Quaternion.Euler(0, 180, 0);
 }
