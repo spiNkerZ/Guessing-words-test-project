@@ -19,10 +19,12 @@ public class InterfaceManager : MonoBehaviour
     {
         iGuessedWordArray.Add(_iGussedWord);
     }
+
     public void AddIGameResultInArray(IGameResult _iGameResult)
     {
         iGameResultArray.Add(_iGameResult);
     }
+
     public void GussedWord(string _originalWord)
     {
         foreach (var item in iGuessedWordArray)
@@ -38,6 +40,7 @@ public class InterfaceManager : MonoBehaviour
             item.IGameWin(_pointCount);
         }
     }
+
     public void GameOver(int _pointCount)
     {
         foreach (var item in iGameResultArray)
@@ -45,6 +48,7 @@ public class InterfaceManager : MonoBehaviour
             item.IGameOver(_pointCount);
         }
     }
+
     public void ContinueGame()
     {
         foreach (var item in iGameResultArray)
@@ -52,6 +56,7 @@ public class InterfaceManager : MonoBehaviour
             item.IGameNextLevel();
         }
     }
+
     public void RestartGame()
     {
         foreach (var item in iGameResultArray)

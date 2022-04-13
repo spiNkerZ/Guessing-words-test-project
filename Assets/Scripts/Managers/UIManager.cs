@@ -35,32 +35,10 @@ public class UIManager : MonoBehaviour, IGameResult
         countPointsInPanel.text = _addPoints.ToString();
     }
 
-    public void SetPoints(int _newValue)
-    {
-        countPoint.text = _newValue.ToString();
-    }
-    public void SetLifes(int _newValue)
-    {
-        countLifes.text = _newValue.ToString();
-    }
-
-    public void IGameOver(int _pointCount)
-    {
-        ActiveLoosePanelAndSetPoints(true, _pointCount);
-    }
-
-    public void IGameWin(int _pointCount)
-    {
-        ActiveWinPanelAndSetPoints(true, _pointCount);
-    }
-
-    public void IGameNextLevel()
-    {
-        ActiveWinPanelAndSetPoints(false);
-    }
-
-    public void IGameRestart()
-    {
-        ActiveLoosePanelAndSetPoints(false);
-    }
+    public void SetPoints(int _newValue) => countPoint.text = _newValue.ToString();
+    public void SetLifes(int _newValue) => countLifes.text = _newValue.ToString();
+    public void IGameOver(int _pointCount) => ActiveLoosePanelAndSetPoints(true, _pointCount);
+    public void IGameWin(int _pointCount) => ActiveWinPanelAndSetPoints(true, _pointCount);
+    public void IGameNextLevel() => ActiveWinPanelAndSetPoints(false);
+    public void IGameRestart() => ActiveLoosePanelAndSetPoints(false);
 }
