@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: TextForRunningLine
+  m_EditorClassIdentifier: 
+  m_GroupName: TextForRunningLine
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 035486f105f1d4540ae57548ead2e600
+  m_SerializeEntries:
+  - m_GUID: 7ce80e2f253131d4ab475fa829fa5c1a
+    m_Address: alice30
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - RunningLineText
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 7856031fc6a8f254ba39a6c54cf5a56e
+    m_Address: TestText
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: bf8129f605a99a44283ab757a6a67b80, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: cc8668da0953f4647b6609df50c709b6, type: 2}
+    - {fileID: 11400000, guid: 7c55bf03c088f734fbefc410482db4b2, type: 2}
